@@ -1,0 +1,31 @@
+// Initialize variables for tracking minerals and prices
+let mineralName = "gold";
+let mineralAmount = 0;
+let mineralPrice = 0;
+
+// Function for extracting minerals
+function extractMineral() {
+  mineralAmount += 1;
+  console.log(`${mineralAmount} ounces of ${mineralName} extracted.`);
+}
+
+// Function for updating mineral price
+function updatePrice(newPrice) {
+  mineralPrice = newPrice;
+  console.log(`Price of ${mineralName} updated to ${mineralPrice} per ounce.`);
+}
+
+// Extract 3 ounces of gold
+extractMineral();
+extractMineral();
+extractMineral();
+
+// Update price of gold to $1000 per ounce
+updatePrice(1000);
+
+// Extract 2 more ounces of gold
+extractMineral();
+extractMineral();
+
+// Output total value of extracted gold
+console.log(`Total value of extracted ${mineralName}: ${mineralAmount * mineralPrice}`);
